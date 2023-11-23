@@ -90,6 +90,9 @@ class RLDSSpec(metaclass=abc.ABCMeta):
     step[rlds_types.IS_FIRST] = tf.TensorSpec(shape=(), dtype=bool)
     step[rlds_types.IS_LAST] = tf.TensorSpec(shape=(), dtype=bool)
     step[rlds_types.IS_TERMINAL] = tf.TensorSpec(shape=(), dtype=bool)
+    # test
+    step['num_steps'] = tf.TensorSpec(shape=(), dtype=tf.int32)
+    step['step_id'] = tf.TensorSpec(shape=(), dtype=tf.int32)
     return step
 
   def episode_tensor_spec(self) -> Dict[str, tf.TensorSpec]:

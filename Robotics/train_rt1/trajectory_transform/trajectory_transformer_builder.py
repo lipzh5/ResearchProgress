@@ -35,7 +35,7 @@ class TrajectoryTransformBuilder(object):
 
     if validate_expected_tensor_spec and self._expected_tensor_spec is None:
       raise ValueError('`expected_tensor_spec` must be set.')
-
+    # construct zero episode for refNode 
     episode_ds = zero_episode_dataset_from_spec(self._rds_dataset_spec)
 
     steps_ds = episode_ds.flat_map(self._episode_to_steps_map_fn)

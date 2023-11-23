@@ -121,6 +121,9 @@ class TrajectoryTransformer(metaclass=abc.ABCMeta):
   def _create_pattern_dataset(self, steps_dataset: tf.data.Dataset) -> tf.data.Dataset:
     """Create PatternDataset from the `steps_dataset`."""
     config = create_structured_writer_config('temp', self.pattern)
+    # print('trajectory transformer create pattern dataset step keys: ')
+    # for step in steps_dataset.take(1):
+    #   print(step.keys())
 
     # Further transform each step if the `step_map_fn` is provided.
     if self.step_map_fn:

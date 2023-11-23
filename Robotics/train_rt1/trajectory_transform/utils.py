@@ -7,6 +7,7 @@ from typing import Any
 import reverb
 import tree
 from collections import OrderedDict
+from tf_agents.trajectories.time_step import StepType
 
 
 
@@ -60,6 +61,25 @@ def step_map_fn(step):  # It works well!!!!
   transformed_step['is_first'] = step['is_first']
   transformed_step['is_last'] = step['is_last']
   transformed_step['is_terminal'] = step['is_terminal']
+
+  transformed_step['num_steps'] = step['num_steps']
+  transformed_step['step_id'] = step['step_id']
+  # for create trajectory-like input
+  step_type = StepType.LAST if step['is_terminal']==True else StepType.MID
+  if step['is_first'] == True:
+    step_type = StepType.FIRST
+  transformed_step['step_type'] = step_type
+
+  # Tensor("args_10:0", shape=(), dtype=int32)
+  # "try" because this step_map_fn may be used by a SimbolicTensfor in transformer_builder  
+  # try: # noqa 
+  #   margin = step['num_steps'].numpy() - step['step_id'].numpy()
+  #   next_step_type = StepType.LAST if margin<=3 else StepType.MID  
+  #   transformed_step['next_step_type'] = next_step_type
+  # except:
+  #   print(step['num_steps'])
+  #   pass
+    
   return transformed_step
 
 
