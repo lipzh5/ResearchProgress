@@ -14,6 +14,8 @@ import sequence_agent
 from trajectory_transformer_builder import TrajectoryTransformBuilder
 from rlds_spec import RLDS_SPEC, TENSOR_SPEC
 from utils import n_step_pattern_builder, step_map_fn
+import importlib
+
 
 
 # from tf_agents.trajectories import StepType
@@ -36,7 +38,7 @@ def get_spec_from_file(rel_path='robotics_transformer/trained_checkpoints/rt1mai
   loaded_action_spec = policy_specs['action_spec']
   policy_state_spec = policy_specs['policy_state_spec']
   info_spec = policy_specs['info_spec']
-  print(policy_specs.keys())
+  # print(policy_specs.keys())
 
   return policy_specs
 
