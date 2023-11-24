@@ -9,9 +9,9 @@ from const import PICK_TARGETS, PLACE_TARGETS, ENGINE
 overwrite_cache = True
 if overwrite_cache:
   LLM_CACHE = {}
-# openai.api_key = "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"
-openai.api_key = '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'
-openai.api_key = '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'
+# replace with your own api key 
+openai.api_key = 'PUT YOUR API KEY HERE'
+
 
 #@title LLM Scoring
 
