@@ -7,11 +7,10 @@
     run_cliport: cal action (pick/place pos) and 
     interact with env.
 
-#### 
-download_src
+
 #### Requirements: 
-1. See requirements.txt 
-2.download assets:
+##### 1. See requirements.txt 
+##### 2.download assets:
 2.1 If you are using GooglColab
   ```
   #Download PyBullet assets.
@@ -26,3 +25,4 @@ download_src
   # ViLD pretrained model weights.
   !gsutil cp -r gs://cloud-tpu-checkpoints/detection/projects/vild/colab/image_path_v2 ./
 ```
+2.2 Otherwise download src via utility functions provided in Utils.py
