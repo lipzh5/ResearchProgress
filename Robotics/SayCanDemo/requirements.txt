@@ -1,16 +1,16 @@
 !pip install ftfy regex tqdm fvcore imageio==2.4.1 imageio-ffmpeg==0.4.5
-#!pip install git+https://github.com/openai/CLIP.git
-#!pip install -U --no-cache-dir gdown --pre
-#!pip install pybullet moviepy
+!pip install git+https://github.com/openai/CLIP.git
+!pip install -U --no-cache-dir gdown --pre
+!pip install pybullet moviepy
 # ----pz added start---
-#!pip install --upgrade -q pip jax jaxlib
-#!pip install jedi
-#!pip install --upgrade -q git+https://github.com/google.flax.git
+!pip install --upgrade -q pip jax jaxlib
+!pip install jedi
+!pip install --upgrade -q git+https://github.com/google.flax.git
 #---- pz added end----
-#!pip install flax==0.5.3
-#!pip install openai
-#!pip install easydict
-#!pip install imageio-ffmpeg
+!pip install flax==0.5.3
+!pip install openai
+!pip install easydict
+!pip install imageio-ffmpeg
 
 #git+https://github.com/openai/CLIP.git
 pybullet
