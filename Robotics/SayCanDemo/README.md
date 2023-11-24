@@ -8,11 +8,12 @@
     interact with env.
 
 #### 
-
+download_src
 #### Requirements: 
 1. See requirements.txt 
 2.download assets:
 2.1 If you are using GooglColab
+  ```
   #Download PyBullet assets.
   if not os.path.exists('ur5e/ur5e.urdf'):
     !gdown --id 1Cc_fDSBL6QiDvNT4dpfAEbhbALSVoWcc
@@ -24,3 +25,4 @@
 
   # ViLD pretrained model weights.
   !gsutil cp -r gs://cloud-tpu-checkpoints/detection/projects/vild/colab/image_path_v2 ./
+```
