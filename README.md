@@ -1,1 +1,4 @@
-Transformer Related Practise
+# Transformer Related Practise
+
+## Positional Encoding
+TODO Pic
